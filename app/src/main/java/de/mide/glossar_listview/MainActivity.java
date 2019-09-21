@@ -50,7 +50,6 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
 
         listView.setOnItemClickListener(this);
 
-
         Toast.makeText(this, "Klick auf einen Eintrag öffnet Beschreibung.", Toast.LENGTH_LONG).show();
     }
 
@@ -65,11 +64,12 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-        TextView begriffsTextView = (TextView) view.findViewById(R.id.textview_begriff);
+        TextView begriffsTextView = view.findViewById(R.id.textview_begriff);
         String begriff = begriffsTextView.getText().toString();
 
         String erklaerungStr = GlossarDaten.getErklaerung(begriff);
         if (erklaerungStr == null || erklaerungStr.trim().length() == 0) {
+
             Toast.makeText(this, "Keine Erklärung für \"" + begriff + "\" verfügbar.", Toast.LENGTH_LONG).show();
             return;
         }
@@ -93,10 +93,12 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
     protected class MeinArrayAdapter extends ArrayAdapter<String> {
 
         public MeinArrayAdapter(Context context, List<String>listeDerBegriffe) {
+
             super(context, R.layout.list_view_item, R.id.textview_begriff, listeDerBegriffe);
             // R.layout.list_view_item: Layout für EINE Zeile
             // R.id.textview_begriff:   TextView-Element im Layout für eine Zeile,
-            //                          wird von der Super-Implementierung automatisch mit einem Eintrag aus listeDerBegriffe befüllt.
+            //                          wird von der Super-Implementierung automatisch mit einem Eintrag
+            //                          aus listeDerBegriffe befüllt.
         }
 
 
@@ -112,7 +114,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
             View view = super.getView(position, convertView, parent);
 
             // Laufende Nummer (1...anzBegriffe) in TextView schreiben
-            TextView nummerTextView = (TextView) view.findViewById(R.id.textview_nummer);
+            TextView nummerTextView = view.findViewById(R.id.textview_nummer);
 
             nummerTextView.setText( position + 1 + "" );
 
