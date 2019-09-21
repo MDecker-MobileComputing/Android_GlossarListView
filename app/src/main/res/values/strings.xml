@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="app_name">Glossar-ListView</string>
+
+    <string name="activity_title">Android-Glossar</string>
+    <string name="dummy_nummer">1</string>
+    <string name="dummy_begriff">Glossar-Begriff</string>
+
+</resources>
