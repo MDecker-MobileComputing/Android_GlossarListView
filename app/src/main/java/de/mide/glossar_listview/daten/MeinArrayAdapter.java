@@ -38,6 +38,10 @@ public class MeinArrayAdapter extends ArrayAdapter<String> {
 
     /**
      * Laufende Nummer in ein Element mit einem Glossar-Begriff schreiben.
+     * <br>
+     *
+     * Wenn diese Methode auskommentiert wird, dann haben alle ListView-Einträge die
+     * Nummer "1" (was der Default-Wert in der Layout-Datei ist).
      *
      * @param position  0-basierter Index des Listen-Elements; wir addieren +1,
      *                  um die laufende Nummer für das Listen-Element zu erhalten.
@@ -51,7 +55,8 @@ public class MeinArrayAdapter extends ArrayAdapter<String> {
 
         TextView nummerTextView = view.findViewById(R.id.textview_nummer);
 
-        nummerTextView.setText( position + 1 + "" );
+        int nummer = position + 1;
+        nummerTextView.setText( nummer + "" );
 
         return view;
     }
