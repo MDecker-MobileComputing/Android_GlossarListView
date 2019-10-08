@@ -23,7 +23,7 @@ public class GlossarDaten {
      */
     protected static void initDaten() {
 
-        sHashMap = new HashMap<String, String>();
+        sHashMap = new HashMap<String, String>(40);
 
         sHashMap.put("AAPT",
                      "Android Asset Packaging Tool. Programm aus dem Android-SDK, welches u.a. die APK-Datei Installations-Datei) erzeugt.");
@@ -65,7 +65,7 @@ public class GlossarDaten {
                      "Inoffizielle Android-Version, Gegenteil von StockROM. Beispiele: CyanogenMod, Replicant, AOKP.");
 
         sHashMap.put("CyanogenMod",
-                     "Beispiel für ein CustomROM, also eine inoffizielle Android-Version.");
+                     "CustomROM, also eine inoffizielle Android-Version, inzwischen eingestellt.");
 
         sHashMap.put("Daydream",
                      "Interaktiver Bildschirmschoner");
