@@ -3,9 +3,10 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent" >
 
-
-  <!-- Diese Datei definiert das Layout für EINEN List-Eintrag
-       (eine Zeile im ListView-Element  -->
+  <!--
+       Diese Datei definiert das Layout für EINEN List-Eintrag
+       (eine Zeile im ListView-Element).
+    -->
 			    
   <TextView
 	  android:id="@+id/textview_nummer"
