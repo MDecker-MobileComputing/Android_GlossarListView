@@ -51,7 +51,8 @@ public class MainActivity extends Activity
 
         listView.setOnItemClickListener(this);
 
-        Toast.makeText(this, "Klick auf einen Eintrag öffnet Beschreibung.", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Klick auf einen Eintrag öffnet Beschreibung.",
+                       Toast.LENGTH_LONG).show();
     }
 
 
@@ -71,12 +72,14 @@ public class MainActivity extends Activity
         String erklaerungStr = GlossarDaten.getErklaerung(begriff);
         if (erklaerungStr == null || erklaerungStr.trim().length() == 0) {
 
-            Toast.makeText(this, "Keine Erklärung für \"" + begriff + "\" verfügbar.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this,
+                           "INTERNER FEHLER: Keine Erklärung für \"" + begriff + "\" verfügbar.",
+                           Toast.LENGTH_LONG).show();
             return;
         }
 
 
-        // Dialog erstellen & anzeigen
+        // Dialog mit Erklärung Glossar-Eintrag erstellen & anzeigen
         AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
         dialogBuilder.setTitle(begriff + ":");
         dialogBuilder.setMessage(erklaerungStr);
@@ -85,7 +88,7 @@ public class MainActivity extends Activity
 
         AlertDialog dialog = dialogBuilder.create();
         dialog.show();
-    };
+    }
 
 
     /* *************************** */
