@@ -29,7 +29,7 @@ public class MeinArrayAdapter extends ArrayAdapter<String> {
     public MeinArrayAdapter(Context context) {
 
         super(  context,
-                R.layout.list_view_item,
+                R.layout.listview_eintrag,
                 R.id.textview_begriff,
                 GlossarDaten.getGlossarBegriffe()
              );

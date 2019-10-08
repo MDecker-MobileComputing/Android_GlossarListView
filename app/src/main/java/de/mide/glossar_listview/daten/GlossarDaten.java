@@ -135,7 +135,7 @@ public class GlossarDaten {
                      "Android-Gerät z.B. durch Flashen der Firmware so manipulieren, dass dem normalen Endnutzer volle (Admin-)Rechte (Root-Rechte) zur Verfügung stehen.");
 
         sHashMap.put("SQLite",
-                     "Kleines relationales Datenbank-System, das auch in Android zur Verfügung steht.");
+                     "Kleines relationales Datenbank-Management-System (DBMS), das u.a. in Android eingebaut ist.");
 
         sHashMap.put("StockROM",
                      "Original-ROM von Hersteller, Gegenteil von inoffiziellem CustomROM wie CyanogenMod.");
@@ -152,7 +152,7 @@ public class GlossarDaten {
      * Liefert sortierte Liste mit allen Glossar-Begriffen zurück
      * (nur die Begriffe, nicht die Erklärung).
      *
-     * @return List mit den Glossar-Begriffe, z.B. "ADB" oder "Daydream".
+     * @return List mit den Glossar-Begriffe, z.B. "ADB" oder "SQLite".
      */
     public static List<String> getGlossarBegriffe() {
 
@@ -160,6 +160,7 @@ public class GlossarDaten {
 
             initDaten();
         }
+
 
         List<String> begriffsListe = new ArrayList<String>( sHashMap.keySet() );
         Collections.sort(begriffsListe);
