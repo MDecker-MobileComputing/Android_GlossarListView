@@ -25,7 +25,8 @@ import android.widget.Toast;
  *
  * This project is licensed under the terms of the BSD 3-Clause License.
  */
-public class MainActivity extends Activity implements AdapterView.OnItemClickListener {
+public class MainActivity extends Activity 
+                          implements AdapterView.OnItemClickListener {
 
     public static final String TAG4LOGGING = "ListViewDemo";
 
@@ -59,7 +60,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
      * Wird aufgerufen, wenn auf einen Eintrage im ListView-Element geklickt wird.
      * Öffnet einen Dialog mit der zugehörigen Erklären für den Glossar-Eintrag.
      *
-     * @param view View-Element (Listen-Zeile), auf die geklickt wurde.
+     * @param view  View-Element (Listen-Zeile), auf die geklickt wurde.
      */
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

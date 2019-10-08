@@ -1,6 +1,6 @@
-# Android-App "Hallo Name"
+# Android-App "Glossary of Android Terms" #
 
-App demonstrates how to use dialog, toasts and log message in Android.
+App demonstrates how to use the [ListView]() element in an Android app.
 
 <br>
 
@@ -9,15 +9,13 @@ Identifiers (names for classes, variables and methods), UI texts and comments ar
 <br>
 
 ----
-## Screenshots
+## Screenshots ##
 
 ![Screenshot 1](screenshot_1.png)  ![Screenshot 2](screenshot_2.png)
-
-![Screenshot 3](screenshot_3.png)
 
 <br>
 
 ----
-# License
+## License ##
 
 See the [LICENSE file](LICENSE.md) for license rights and limitations (BSD 3-Clause License).
