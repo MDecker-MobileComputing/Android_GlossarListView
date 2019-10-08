@@ -8,8 +8,10 @@
 	tools:context=".MainActivity" >
 
 	<ListView
-        android:id="@+id/listview_1"
+        android:id="@+id/begriffe_listview"
 	    android:layout_width="match_parent"
 	    android:layout_height="match_parent" />
 
 </RelativeLayout>
+
+

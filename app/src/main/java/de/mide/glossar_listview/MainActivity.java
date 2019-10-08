@@ -28,6 +28,8 @@ import android.widget.Toast;
 public class MainActivity extends Activity 
                           implements AdapterView.OnItemClickListener {
 
+
+    /** Markierung für alle Log-Nachrichten, die von dieser App geschrieben werden. */
     public static final String TAG4LOGGING = "ListViewDemo";
 
 
@@ -41,7 +43,7 @@ public class MainActivity extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final ListView listView = findViewById(R.id.listview_1);
+        final ListView listView = findViewById(R.id.begriffe_listview);
 
         List<String> begriffsListe = GlossarDaten.getGlossarBegriffe();
         Log.i(TAG4LOGGING, "Anzahl der Glossar-Einträge: " + begriffsListe.size() );
@@ -71,6 +73,8 @@ public class MainActivity extends Activity
 
         String erklaerungStr = GlossarDaten.getErklaerung(begriff);
         if (erklaerungStr == null || erklaerungStr.trim().length() == 0) {
+
+            Log.w(TAG4LOGGING, "Keine Definition für Begriff \"" + begriff + "\" erhalten.");
 
             Toast.makeText(this,
                            "INTERNER FEHLER: Keine Erklärung für \"" + begriff + "\" verfügbar.",
