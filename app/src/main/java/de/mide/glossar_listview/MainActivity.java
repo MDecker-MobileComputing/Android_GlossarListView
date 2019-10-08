@@ -1,20 +1,18 @@
 package de.mide.glossar_listview;
 
 
-import java.util.List;
-
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import de.mide.glossar_listview.daten.GlossarDaten;
+import de.mide.glossar_listview.daten.MeinArrayAdapter;
 
 
 /**
@@ -37,6 +35,7 @@ public class MainActivity extends Activity
      * Lifecycle-Methode, richtet UI ein. Erzeugt auch Adapter-Objekt und
      * übergibt es an ein ListView-Element.
      */
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -45,10 +44,7 @@ public class MainActivity extends Activity
 
         final ListView listView = findViewById(R.id.begriffe_listview);
 
-        List<String> begriffsListe = GlossarDaten.getGlossarBegriffe();
-        Log.i(TAG4LOGGING, "Anzahl der Glossar-Einträge: " + begriffsListe.size() );
-
-        MeinArrayAdapter meinArrayAdapter = new MeinArrayAdapter(this, begriffsListe);
+        MeinArrayAdapter meinArrayAdapter = new MeinArrayAdapter(this );
         listView.setAdapter(meinArrayAdapter);
 
         listView.setOnItemClickListener(this);
@@ -93,45 +89,5 @@ public class MainActivity extends Activity
         AlertDialog dialog = dialogBuilder.create();
         dialog.show();
     }
-
-
-    /* *************************** */
-    /* *** Start innere Klasse *** */
-    /* *************************** */
-    protected class MeinArrayAdapter extends ArrayAdapter<String> {
-
-        public MeinArrayAdapter(Context context, List<String>listeDerBegriffe) {
-
-            super(context, R.layout.list_view_item, R.id.textview_begriff, listeDerBegriffe);
-            // R.layout.list_view_item: Layout für EINE Zeile
-            // R.id.textview_begriff:   TextView-Element im Layout für eine Zeile,
-            //                          wird von der Super-Implementierung automatisch mit einem Eintrag
-            //                          aus listeDerBegriffe befüllt.
-        }
-
-
-        /**
-         * Methode liefert View-Element für EINE Listen-Zeile zurück.
-         * Die Super-Implementierung befüllt schon das TextView-Element für den Begriff
-         * anhand des im Konstruktor übergebenen List-Objekts. Die durchlaufende Nummer
-         * für das zweite TextView-Element müssen wir in dieser Methode selbst bestimmt.
-         */
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-
-            View view = super.getView(position, convertView, parent);
-
-            // Laufende Nummer (1...anzBegriffe) in TextView schreiben
-            TextView nummerTextView = view.findViewById(R.id.textview_nummer);
-
-            nummerTextView.setText( position + 1 + "" );
-
-            return view;
-        }
-    }
-
-    /* *************************** */
-    /* *** Ende innere Klasse  *** */
-    /* *************************** */
 
 };

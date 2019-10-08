@@ -1,13 +1,20 @@
-package de.mide.glossar_listview;
+package de.mide.glossar_listview.daten;
+
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
+import de.mide.glossar_listview.MainActivity;
+
 
 /**
  * Diese Klasse stellt die in der Liste anzuzeigenden Glossar-Begriffe zur Verfügung.
+ * <br><br>
+ *
+ * This project is licensed under the terms of the BSD 3-Clause License.
  */
 public class GlossarDaten {
 
@@ -156,6 +163,8 @@ public class GlossarDaten {
 
         List<String> begriffsListe = new ArrayList<String>( sHashMap.keySet() );
         Collections.sort(begriffsListe);
+
+        Log.i(MainActivity.TAG4LOGGING, "Anzahl Glossar-Begriffe: " + begriffsListe.size() );
 
         return begriffsListe;
     }
