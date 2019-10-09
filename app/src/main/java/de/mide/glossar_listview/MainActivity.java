@@ -65,9 +65,11 @@ public class MainActivity extends Activity
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
         TextView begriffsTextView = view.findViewById(R.id.textview_begriff);
-        String begriff = begriffsTextView.getText().toString();
 
-        String erklaerungStr = GlossarDaten.getErklaerung(begriff);
+        String begriff            = begriffsTextView.getText().toString();
+
+        String erklaerungStr      = GlossarDaten.getErklaerung(begriff);
+
         if (erklaerungStr == null || erklaerungStr.trim().length() == 0) {
 
             Log.w(TAG4LOGGING, "Keine Definition für Begriff \"" + begriff + "\" erhalten.");

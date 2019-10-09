@@ -24,7 +24,7 @@ public class MeinArrayAdapter extends ArrayAdapter<String> {
      * Konstruktor, der Konstruktor der Oberklasse aufruft und dabei Liste aller
      * Glossar-Begriffe übergibt.
      *
-     * @param context  App-Kontext
+     * @param context  App-Kontext der aufrufenden Activity.
      */
     public MeinArrayAdapter(Context context) {
 
