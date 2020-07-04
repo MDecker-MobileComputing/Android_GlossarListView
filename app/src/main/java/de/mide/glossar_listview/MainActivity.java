@@ -26,7 +26,6 @@ import de.mide.glossar_listview.daten.MeinArrayAdapter;
 public class MainActivity extends Activity 
                           implements AdapterView.OnItemClickListener {
 
-
     /** Markierung für alle Log-Nachrichten, die von dieser App geschrieben werden. */
     public static final String TAG4LOGGING = "ListViewDemo";
 
@@ -35,7 +34,6 @@ public class MainActivity extends Activity
      * Lifecycle-Methode, richtet UI ein. Erzeugt auch Adapter-Objekt und
      * übergibt es an ein ListView-Element.
      */
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
