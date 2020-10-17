@@ -19,7 +19,6 @@ import de.mide.glossar_listview.R;
  */
 public class MeinArrayAdapter extends ArrayAdapter<String> {
 
-
     /**
      * Konstruktor, der Konstruktor der Oberklasse aufruft und dabei Liste aller
      * Glossar-Begriffe übergibt.
