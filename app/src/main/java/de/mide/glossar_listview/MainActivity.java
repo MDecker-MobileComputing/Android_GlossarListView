@@ -23,8 +23,8 @@ import de.mide.glossar_listview.daten.MeinArrayAdapter;
  *
  * This project is licensed under the terms of the BSD 3-Clause License.
  */
-public class MainActivity extends Activity 
-                          implements AdapterView.OnItemClickListener {
+public class MainActivity extends Activity
+        implements AdapterView.OnItemClickListener {
 
     /** Markierung für alle Log-Nachrichten, die von dieser App geschrieben werden. */
     public static final String TAG4LOGGING = "ListViewDemo";
@@ -48,7 +48,7 @@ public class MainActivity extends Activity
         listView.setOnItemClickListener(this);
 
         Toast.makeText(this, "Klick auf einen Eintrag öffnet Beschreibung.",
-                       Toast.LENGTH_LONG).show();
+                Toast.LENGTH_LONG).show();
     }
 
 
@@ -73,8 +73,8 @@ public class MainActivity extends Activity
             Log.w(TAG4LOGGING, "Keine Definition für Begriff \"" + begriff + "\" erhalten.");
 
             Toast.makeText(this,
-                           "INTERNER FEHLER: Keine Erklärung für \"" + begriff + "\" verfügbar.",
-                           Toast.LENGTH_LONG).show();
+                    "INTERNER FEHLER: Keine Erklärung für \"" + begriff + "\" verfügbar.",
+                    Toast.LENGTH_LONG).show();
             return;
         }
 

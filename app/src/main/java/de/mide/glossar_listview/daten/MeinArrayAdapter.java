@@ -31,7 +31,7 @@ public class MeinArrayAdapter extends ArrayAdapter<String> {
                 R.layout.listview_eintrag,
                 R.id.textview_begriff,
                 GlossarDaten.getGlossarBegriffe()
-             );
+        );
     }
 
 
