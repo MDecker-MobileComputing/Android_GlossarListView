@@ -1,12 +1,12 @@
-# Android-App "Glossary of Android Terms" #
+# Android-App "Glossar Android-Begriffe"
 
 <br>
 
-App demonstrates how to use the [ListView](https://developer.android.com/reference/android/widget/ListView) element in an Android app.
+Dieses Repo enthält den Quellcode für eine native Android-App mit Java, die ein einfaches Glossar für Android-Begriffe implementiert.
+Es soll damit die Verwendung des UI-Elements [ListView](https://developer.android.com/reference/android/widget/ListView) demonstriert werden.
 
-<br>
-
-Identifiers (names for classes, variables and methods), UI texts and comments are in German only.
+Achtung: Es gibt inzwischen mit dem UI-Element [RecyclerView](https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.html)
+eine modernere Alternative für [ListView](https://developer.android.com/reference/android/widget/ListView)-Elemente.
 
 <br>
 
@@ -16,7 +16,7 @@ Identifiers (names for classes, variables and methods), UI texts and comments ar
 
 <br>
 
-![Screenshot 1](screenshot_1.png)  ![Screenshot 2](screenshot_2.png)
+![Screenshot 1](screenshot_1.png) &nbsp; ![Screenshot 2](screenshot_2.png)
 
 <br>
 
